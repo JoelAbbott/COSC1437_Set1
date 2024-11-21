@@ -1,0 +1,179 @@
+Program Set #1
+Total Points: 20
+Two of the three problems below must be implemented for full credit. See the 1437 Grading and
+Submission Guide Sheets for additional grading/submission information. Partial credit will be given.
+(10 points each)
+Section One- Choose two problems.
+1. The 73rd episode of the TV series "The Big Bang Theory" is special for math lovers. In the episode
+Sheldon explains to them that the best number is 73 because 73 is the 21st prime number. Its mirror,
+37, is the 12th prime, which in turn is the mirror of 21. Mathematicians have named this number (73)
+the Sheldon prime. Write a C++ program given a positive integer number indicates what type of
+relation it has with the Sheldon prime according to certain rules. The rules are as follows:
+• A number N is a Sheldon prime if:
+o N is prime (73)
+o M, which is the mirror of N, is prime (37)
+o The position of N in the prime numbers (21 st
+) is the mirror of the position of M (12th )
+• A number N is a relative of the Sheldon prime if:
+o N is prime (769)
+o M, which is the mirror of N, is prime (967)
+o The position of N (136 th ) is a permutation (with the same digits) of the position of M
+(163 rd )
+• A number N is a close friend of the Sheldon prime if:
+o N is prime (1409)
+o M, which is the mirror of N, is prime (9041)
+o The position of N (223 rd ) and the position of M (1123 rd ) are primes.
+• A number N is a friend of Sheldon prime if:
+o N is prime (17)
+o M, which is the mirror of N, is prime (71)
+Notice that every number can only fit in one of the categories, giving higher priority to the first bullet
+(Sheldon prime) and less priority to bullet four (a friend). Input from the keyboard a positive integer
+number in the range [1,100000]. Error check inputs. Output to the screen a message indicating the
+type of the input number in the format shown below:
+• If it is a Sheldon prime the message is: "Number N is a Sheldon prime!"
+• If it is a relative of Sheldon prime: "Number N is a Sheldon prime relative."
+• If it is a close friend of Sheldon prime: "Number N is a close friend of Sheldon prime."
+• If it is a friend of Sheldon prime: "Number N is a friend of Sheldon prime."
+• If it is a number not related to a Sheldon prime: "Number N is not related to Sheldon
+prime."
+where N is the input number. Finally, the program should ask if the user wants to run the program again
+(Check case). Refer to the sample output below.
+COSC 1437 S24
+2
+Sample Run:
+Enter number [1-100000]: 73
+Number 73 is a Sheldon prime!
+Run Again (Y/N): y
+Enter number [1-100000]: 17
+Number 17 is a friend of Sheldon prime.
+Run Again (Y/N): Y
+Enter number [1-100000]: 9
+Number 9 is not related to Sheldon prime.
+Run Again (Y/N): y
+Enter number [1-100000]: 1409
+Number 1409 is a close friend of Sheldon prime.
+Run Again (Y/N): N
+Name the program: SheldonPrime73XX.cpp where XX are your initials.
+2. Write a C++ program, that takes an integer number and returns an English text sequence starting with
+the English cardinal representation of that integer, the word "is" and then the English cardinal
+representation of the count of characters that made up the first word, followed by a comma. Continue
+the sequence by using the previous count word as the first word of the next phrase, append "is" and
+the cardinal count of the letters in that word. Finish the sequence once four is reached. Since four has
+four characters, finish by adding the words "four is cosmic" and a period. All integers will eventually
+wind up at four. For example, if the input was 3 convert 3 to Three, add is, then the cardinal character
+count of three, or five, with a comma to separate if from the next phrase. Continue the sequence five is
+four, (five has four letters), and finally, four is cosmic. Thus:
+Three is five, five is four, four is cosmic.
+Some additional rules:
+• When converted to a word string, spaces and hyphens should not be included in the count (100
+[One hundred] is 10 characters, not 11. 1,742 [One thousand seven hundred forty two] is 31
+characters, not 36)
+• When converted to a string, 100 should be One hundred, not A hundred or Hundred, 1000
+should be One thousand, not A thousand or Thousand.
+COSC 1437 S24
+3
+• When converted to a string 142 should be One hundred forty two, not One hundred and forty
+two
+Input from the keyboard an integer in the range [0, 1000000]. Error check inputs. Output to the screen
+the step of each pattern as described above on separate lines. Do not consider spaces or commas part of
+a number’s character count, and there should be no "and" in the spellings of the numbers. Finally, the
+program should ask if the user wants to run the program again (Check case). Use a function in the
+calculation. Refer to the sample output below.
+Sample Run:
+Enter number [0-1000000]: 0
+Zero is four,
+four is cosmic.
+Run Again (Y/N): y
+Enter number [0-1000000]: 4
+Four is cosmic.
+Run Again (Y/N): y
+Enter number [0-1000000]: 100
+One hundred is ten,
+ten is three
+three is five,
+five is four,
+four is cosmic.
+Run Again (Y/N): y
+Enter number [0-1000000]: 999999
+Nine hundred ninety nine thousand nine hundred ninety nine is fifty
+fifty is five,
+five is four,
+four is cosmic
+Run Again (Y/N): N
+Name the program: CosmicNumberXX.cpp where XX are your initials.
+3. Holidays can fall on the same day every year such as Christmas Day (December 25th). Not all
+holidays, however, fall on the same day every year. These floating holidays do have a pattern to their
+scheduling. The following are six examples of floating holidays:
+COSC 1437 S24
+4
+M.L. King Day 3 rd Monday of January
+Presidents Day 3 rd Monday of February
+Memorial Day Last Monday of May
+Labor Day 1 st Monday of September
+Election Day Tuesday after the 1 st Monday of November
+Thanksgiving Day 4 th Thursday of November
+Write a C++ program to determine the actual date for each of the six holidays listed above for a given
+year. Input from the keyboard will be an integer in the range [1700,2100]. Error check inputs. Output
+to the screen, each of the dates of the six floating holidays celebrated that year in the order listed
+above. Express the dates in a MM/DD/YYYY format. Finally, the program should ask if the user wants to
+run the program again (Check case). Refer to the sample output below.
+Sample Run:
+Enter year [1700-2200]: 2057
+M L King Day 01/15/2057
+Presidents Day 02/19/2057
+Memorial Day 05/28/2057
+Labor Day 09/03/2057
+Election Day 11/06/2057
+Thanksgiving Day 11/22/2057
+Run Again (Y/N): n
+Name the program: FloatingHolidaysXX.cpp, where XX are your initials.
+Extra Credit: Choose one of the two problems below to Implement for extra credit. See the 1437
+Grading and Submission Guide Sheets for additional grading/submission information. Partial credit
+will be given. (10 points)
+1. Since the cycle for the moon is approximately 29 days 12 hours, it is possible to have two full moons
+within a single calendar month. This second full moon is commonly referred to as a blue moon. Write a
+C++ program given a month and year that computes when blue moons occur within a calendar year.
+Input from the keyboard a month in the range [1,12] and year [1783,2100] on the same line
+separated by a space. Error check inputs.
+Output to the screen in the form: MM/DD/YYYY the blue moons in that calendar year. If there is
+no blue moon, output "No blue moon . " If a blue moon happens in the given month it is counted as the
+first instance. If there are multiple blue moons in one year, the dates of each of the blue moons must be
+printed in chronological order on the same line as seen in the formatting below. Finally, the program
+COSC 1437 S24
+5
+should ask if the user wants to run the program again (Check case). Use a function in the calculation.
+Refer to the sample output below.
+Sample Run:
+Enter month and year: 10 2012
+No blue moon.
+Run Again (Y/N): y
+Enter month and year: 1 2013
+No blue moon.
+Run Again (Y/N): y
+Enter month and year: 1 1999
+The next blue moon(s) occur on: 01/31/1999 and 03/31/1999
+Run Again (Y/N): y
+Enter month and year: 4 1993
+The next blue moon(s) occurs on: 09/30/1993
+Run Again (Y/N): n
+Name the program: BlueMoonXX.cpp where XX are your initials.
+2. Among all the superstitions, the classic one is the fear of Friday the 13 th . Write a C++ program given
+date output the month and year when the next Friday the 13 th will occur. Input from the keyboard a
+month in the range [1,12], day in the range [1,31] and year [1783,2100] on the same line separated
+by a space. Error check inputs. If the input date is a Friday the 13 th the program should find the next
+Friday the 13 th . Output to the screen when the next Friday the 13 th will occur in the format: MM/DD/YYYY.
+Finally, the program should ask if the user wants to run the program again (Check case). Use a function
+in the calculation. Refer to the sample output below.
+Sample Run:
+Enter month, day and year: 9 1 1800
+The next Friday the 13th: 02/13/1801
+Run Again (Y/N): y
+Enter month, day and year: 7 13 2007
+COSC 1437 S24
+6
+The next Friday the 13th: 06/12/2008
+Run Again (Y/N): Y
+Enter month, day and year: 3 26 2000
+The next Friday the 13th: 10/13/2000
+Run Again (Y/N): n
+Name the program: Friday13thXX.cpp where XX are your initials.
